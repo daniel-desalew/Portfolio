@@ -1,0 +1,34 @@
+/* client/src/pages/NotFound.css */
+.notfound-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.notfound-content {
+  max-width: 500px;
+}
+
+.notfound-code {
+  font-size: 8rem;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 10px;
+  letter-spacing: -5px;
+}
+
+.notfound-content h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.notfound-content p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}

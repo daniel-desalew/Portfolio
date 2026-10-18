@@ -1,0 +1,146 @@
+/* client/src/pages/Admin.css */
+.admin-login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.admin-login-box {
+  background: var(--bg-card);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.admin-login-box h2 {
+  margin-bottom: 10px;
+}
+.admin-login-box p {
+  color: var(--text-muted);
+  margin-bottom: 30px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 16px 14px 45px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+}
+
+.admin-dashboard {
+  padding: 120px 20px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.admin-form-card,
+.admin-list-card {
+  background: var(--bg-card);
+  padding: 30px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+}
+
+.admin-form-card h2,
+.admin-list-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.admin-form-card input,
+.admin-form-card textarea {
+  padding: 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+}
+
+.admin-project-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border-bottom: 1px solid var(--border);
+}
+
+.admin-project-item img {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.admin-project-info {
+  flex: 1;
+}
+.admin-project-info h4 {
+  margin-bottom: 4px;
+}
+.admin-project-info p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.delete-btn {
+  background: rgba(244, 63, 94, 0.1);
+  color: #f43f5e;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  background: #f43f5e;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+}

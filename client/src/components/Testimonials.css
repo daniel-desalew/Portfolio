@@ -1,0 +1,69 @@
+/* client/src/components/Testimonials.css */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.testimonial-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.testimonial-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+}
+
+.star-fill {
+  color: #fbbf24; /* Golden yellow */
+  fill: #fbbf24;
+  font-size: 1.2rem;
+}
+
+.review-text {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  font-style: italic;
+  flex-grow: 1;
+}
+
+.reviewer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+
+.reviewer img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.reviewer h4 {
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.reviewer p {
+  font-size: 0.85rem;
+  color: var(--accent);
+}

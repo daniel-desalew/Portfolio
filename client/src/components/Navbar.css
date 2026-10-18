@@ -1,0 +1,151 @@
+/* client/src/components/Navbar.css */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 20px 0;
+  transition: all 0.3s ease;
+  background: var(--bg-secondary); /* Matches Footer */
+  border-bottom: 1px solid transparent;
+}
+
+/* Changes when scrolling down */
+.navbar-scrolled {
+  padding: 12px 0;
+  background: rgba(15, 23, 42, 0.85); /* Dark transparent background */
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+
+[data-theme="light"] .navbar-scrolled {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* --- LOGO STYLES --- */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.navbar-logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Makes it a perfect circle */
+  object-fit: cover;
+  border: 2px solid var(--accent); /* Cyan border */
+  box-shadow: 0 0 10px var(--accent-glow); /* Glowing effect */
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover .navbar-logo-img {
+  transform: scale(1.1) rotate(5deg); /* Fun hover effect */
+}
+
+/* --- NAVIGATION LINKS --- */
+.navbar-links {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.navbar-link {
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #94a3b8; /* Muted text color */
+  transition: all 0.3s ease;
+  position: relative;
+  text-decoration: none;
+}
+
+.navbar-link:hover {
+  color: var(--accent);
+}
+
+/* Active Link (Cyan background) */
+.navbar-link.active {
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+}
+
+/* --- BUTTONS --- */
+.navbar-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.icon-btn {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1.5px solid #38bdf8; /* Cyan border */
+  border-radius: 10px;
+  color: #38bdf8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.icon-btn:hover {
+  background: rgba(56, 189, 248, 0.15);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    border-color: var(--text-muted);
+    color: var(--text-muted);
+  }
+
+  .navbar-links {
+    position: fixed;
+    top: 70px;
+    left: 16px;
+    right: 16px;
+    flex-direction: column;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    gap: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .navbar-links.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .navbar-link {
+    width: 100%;
+    padding: 14px 16px;
+  }
+}

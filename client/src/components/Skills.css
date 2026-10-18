@@ -1,0 +1,81 @@
+/* client/src/components/Skills.css */
+.skills-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.skills-loading {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 40px;
+}
+
+.skill-category {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+
+.skill-category-title {
+  font-size: 1.25rem;
+  margin-bottom: 24px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* The little cyan line next to the category name */
+.skill-category-title::before {
+  content: "";
+  width: 4px;
+  height: 20px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+}
+
+.skill-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.skill-name {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.skill-percent {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.skill-track {
+  height: 8px;
+  background: var(--bg-secondary);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background: var(--gradient-primary);
+  border-radius: 999px;
+  box-shadow: 0 0 12px var(--accent-glow);
+}

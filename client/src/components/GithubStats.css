@@ -1,0 +1,95 @@
+/* client/src/components/GithubStats.css */
+.github-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.github-stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.gh-stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 24px 40px;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.gh-icon {
+  font-size: 1.8rem;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.gh-stat-card h3 {
+  font-size: 2rem;
+  color: var(--text);
+}
+
+.gh-stat-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.gh-repos-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.gh-repo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gh-repo-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 20px;
+  border-radius: var(--radius);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.gh-repo-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.gh-repo-card h4 {
+  color: var(--accent);
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.gh-repo-card p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  height: 40px;
+  overflow: hidden;
+}
+
+.gh-repo-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+
+.gh-repo-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

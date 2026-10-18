@@ -1,0 +1,19 @@
+/* Theme tokens. Change --accent to recolor the whole site. */
+:root {
+  --bg: #0b1220;
+  --surface: #131c2e;
+  --text: #e6edf7;
+  --muted: #9aa8bf;
+  --accent: #38bdf8;
+  --border: #243049;
+  --radius: 10px;
+}
+
+[data-theme="light"] {
+  --bg: #f7f9fc;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --muted: #51607a;
+  --accent: #0369a1;
+  --border: #dbe3ef;
+}
